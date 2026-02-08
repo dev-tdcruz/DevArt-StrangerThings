@@ -1,0 +1,710 @@
+html,
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+#preLoader {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 40vw;
+        height: auto;
+
+        path {
+            fill: rgba(168, 19, 19, 0);
+            stroke: rgb(168, 19, 19);
+            stroke-width: 0.15px;
+            stroke-dasharray: 110px;
+            stroke-dashoffset: 110px;
+        }
+    }
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 3vw;
+    position: absolute;
+    z-index: 9;
+}
+
+header h2 {
+    font-size: 26px;
+}
+
+header img {
+    height: 28px;
+}
+
+.hero {
+    background-size: cover;
+    background-position: 50% 0%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    picture {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+    }
+
+    .bg-1 {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        /* top: 0;
+        left: 0; */
+    }
+}
+
+.hero::before {
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, black 100%);
+    width: 100%;
+    height: 101%;
+    z-index: 2;
+    position: absolute;
+}
+
+.teste {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vw 200px;
+    z-index: 2;
+
+}
+
+.heroEsquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 457px;
+    height: 203px;
+    gap: 14px;
+}
+
+.heroEsquerdo h2 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.heroEsquerdo h1 {
+    font-family: "Benguiat", sans-serif;
+    font-size: 68px;
+}
+
+.heroDireito {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    width: 463px;
+    height: 191px;
+    gap: 28px;
+}
+
+.heroDireito p {
+    font-size: 36px;
+    text-align: end;
+}
+
+.heroDireito button {
+    font-size: 18px;
+    display: flex;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid white;
+}
+
+.bgMonstro {
+    background-image: url("./projeto-amigos/imagens/bg-sec2.webp");
+    background-color: black;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.escolhaCidade {
+    max-width: 1920px;
+    padding: 80px 10vw;
+    width: 100%;
+}
+
+.headCidade {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headCidade h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.headCidade button {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid white;
+}
+
+.cardsCidades {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    gap: 1%;
+
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.legenda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 20px;
+}
+
+.legenda h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.legenda p {
+    font-size: 14px;
+}
+
+.premiosDepoimentos {
+    padding: 60px 10vw;
+    max-width: 1920px;
+}
+
+.premios {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.depoimentos {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 0;
+    gap: 10%;
+}
+
+.depoimentos p {
+    font-size: 18px;
+    padding-top: 36px;
+}
+
+.agradecimento {
+    padding: 30px 10vw;
+    max-width: 1920px;
+    text-align: center;
+    width: 100%;
+}
+
+.cidades {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    padding: 68px 0;
+}
+
+.escondido {
+    display: none;
+}
+
+footer {
+    background-image: url("./projeto-amigos/imagens/bg-footer.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.mainFooter {
+    display: flex;
+    width: 100%;
+    padding: 150px 10vw;
+    justify-content: space-between;
+}
+
+.footerEsquerda {
+    text-align: center;
+    width: 353px;
+
+    h3 {
+        font-weight: 400;
+        font-size: 30px;
+        letter-spacing: 8.5px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-family: "Benguiat", sans-serif;
+        font-size: 51px;
+        text-align: left;
+    }
+}
+
+.footerDireita {
+    display: flex;
+    align-items: end;
+    gap: 3vw;
+
+    h3 {
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .redesSociais .redes {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    li {
+        list-style: none;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+
+.textoInfinito {
+    width: max-content;
+    display: flex;
+    /* padding-top: 30px; */
+
+    h3 {
+        color: #d3d3d3;
+        font-family: "Benguiat", sans-serif;
+        font-size: 12vw;
+        padding-left: 8vw;
+        mix-blend-mode: color-dodge;
+        animation: movimento 10s linear infinite;
+    }
+}
+
+@keyframes movimento {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width:1500px) {
+
+    .legenda {
+        display: initial;
+    }
+
+    .legenda h3 {
+        padding-bottom: 3px;
+    }
+
+    .cidades {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 32px;
+        padding: 6vh 12vw;
+    }
+
+}
+
+@media (max-width:1280px) {
+
+    header {
+        padding: 64px 8vw;
+
+        h2 {
+            font-size: 2.5vh;
+        }
+
+        img {
+            height: 2.5vh;
+        }
+    }
+
+    .heroEsquerdo {
+        align-items: start;
+        gap: 8px;
+    }
+
+    .heroEsquerdo h2 {
+        font-size: 32px;
+    }
+
+    .heroEsquerdo h1 {
+        font-size: 56px;
+    }
+
+    .heroDireito {
+        justify-content: start;
+        width: 400px;
+        gap: 16px;
+    }
+
+    .heroDireito p {
+        font-size: 32px;
+    }
+
+    .heroDireito button {
+        font-size: 18px;
+        display: flex;
+        gap: 12px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid white;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .teste {
+        text-align: center;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 140px;
+    }
+
+    .heroEsquerdo {
+        width: 60vw;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .heroEsquerdo h2 {
+        padding-left: 10px;
+        font-size: 3.5vw;
+    }
+
+    .heroEsquerdo h1 {
+        font-size: 6.5vw;
+    }
+
+    .heroDireito {
+        align-items: end;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 12vw 100px;
+        flex-direction: row;
+    }
+
+    .heroDireito p {
+        font-size: 24px;
+        text-align: start;
+        width: 300px;
+    }
+
+    .headCidade h2 {
+        font-size: 24px;
+    }
+
+    .legenda {
+        padding: 8px 8px;
+    }
+
+    .legenda h3 {
+        font-size: 16px;
+    }
+
+    .legenda p {
+        font-size: 10px;
+    }
+
+    .premios img:nth-child(1),
+    .premios img:nth-child(3) {
+        height: 2.5vh;
+    }
+
+    .premios img:nth-child(2) {
+        height: 9vh;
+    }
+
+    .depoimentos p {
+        font-size: 12px;
+    }
+
+    .agradecimento h2 {
+        font-size: 2.3vw;
+    }
+
+    .cidades {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        justify-content: center;
+        animation: movcidades 60s ease-in-out infinite;
+    }
+
+    .escondido {
+        display: initial;
+    }
+
+    @keyframes movcidades {
+        50% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(123%);
+        }
+    }
+
+    .mainFooter {
+
+        flex-direction: column;
+
+        padding: 100px 0;
+        align-items: center;
+        gap: 60px;
+
+    }
+
+    .footerEsquerda {
+        width: 40vw;
+
+        h3 {
+            font-size: 3vw;
+            padding-left: 4px;
+
+        }
+
+        h2 {
+            font-size: 5.5vw;
+            text-align: center;
+        }
+    }
+
+    .footerDireita {
+        align-items: start;
+        gap: 15vw;
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .redesSociais .redes {
+            justify-content: space-between;
+        }
+
+        .parceiro img {
+            width: 120px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+    }
+
+    .logos {
+        padding: 0 8vw;
+        height: 2.5vh;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .heroDireito p {
+        font-size: 18px;
+        width: 235px;
+    }
+
+    .heroDireito button {
+        font-size: 14px;
+    }
+
+    .escolhaCidade {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .headCidade {
+        gap: 36px;
+    }
+
+    .headCidade h2 {
+        font-size: 3.8vw;
+    }
+
+    .headCidade button {
+        font-size: 14px;
+        padding-bottom: 8px;
+    }
+
+    .cardsCidades {
+        flex-direction: column;
+        width: 75vw;
+
+    }
+
+    .legenda {
+        display: flex;
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width:440px) {
+
+    header {
+        padding-top: 40px;
+        align-items: center;
+    }
+
+    header h2 {
+        font-size: 3vw;
+    }
+
+    header img {
+        height: 3vw;
+    }
+
+    .heroEsquerdo h2 {
+        font-size: 4vw;
+        line-height: 150%;
+    }
+
+    .heroEsquerdo h1 {
+        font-size: 11vw;
+    }
+
+    .heroDireito {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .heroDireito p {
+        font-size: 20px;
+        width: 250px;
+    }
+
+    .heroDireito button {
+        font-size: 16px;
+        padding-bottom: 12px;
+    }
+
+    .headCidade {
+        padding-right: 34vw;
+    }
+
+    .headCidade button {
+        display: none;
+    }
+
+    .premios {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .depoimentos {
+        flex-direction: column;
+        gap: 48px;
+        padding: 120px 7vw;
+    }
+
+    .agradecimento h2 {
+        font-size: 4vw;
+    }
+
+    .footerEsquerda {
+        width: 72vw;
+
+        h2 {
+            font-size: 9vw;
+        }
+    }
+
+    .footerDireita {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 9vw 15vw;
+
+        .redesSociais {
+            width: 52vw;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            .redes {
+                justify-content: space-evenly;
+            }
+        }
+
+        .institucional {
+            text-align: end;
+        }
+    }
+
+    .logos {
+        height: 3vw;
+    }
+
+    .textoInfinito {
+        padding-top: 0;
+
+        h3 {
+            font-size: 32vw;
+        }
+    }
+
+}
